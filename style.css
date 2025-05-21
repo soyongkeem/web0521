@@ -1,0 +1,367 @@
+/* ========== 기본 설정 ========== */
+body {
+  background-color: #39FF14;
+  margin: 0;
+  font-family: sans-serif;
+  font-size: 21px;
+  line-height: 1.8;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* ========== 섹션 레이아웃 ========== */
+section {
+  min-height: 105vh;
+  display: flex;
+  align-items: center;
+}
+
+/* 이미지 */
+.section-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem 0;
+}
+
+/* 배경 움직임 */
+@keyframes bgMove {
+  0% { background-position: 0%; }
+  100% { background-position: 100%; }
+}
+
+#overview {
+  background-image: url('../img/bg2.jpg');
+  animation: bgMove 16s linear infinite;
+}
+
+/* ========== 콘텐츠 래핑 ========== */
+.wrap-text {
+  height: 100%;
+  width: 80%;
+  padding: 4rem;
+  margin: 0 auto;
+  text-align: justify;
+  color: #0084ff;
+}
+.wrap,
+.wrap-intro,
+.wrap-white,
+.wrap-yellow,
+.wrap-green,
+.wrap-black {
+  height: 100%;
+  max-width: 900px;
+  width: 100%;
+  padding: 4rem;
+  margin: 0 auto;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.wrap {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+}
+
+.wrap-intro {
+  height: 90vh;
+  background-color: rgb(92, 92, 92);
+  color: white;
+}
+
+.wrap-white {
+  color: #000000;
+  background-color: rgb(255, 255, 255);
+}
+.wrap-green {
+  background-color: #39FF14;
+  color: white;
+}
+
+.title {
+  font-family: 'Impact', sans-serif;
+  font-size: 80px;
+  color: white;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+
+/* 좌우 움짤 배치 */
+.left-gif,
+.right-gif {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+
+
+.left-gif {
+    left: 12vw;  /* 화면 왼쪽에서 살짝 안쪽으로 */
+}
+
+.right-gif {
+  right: 12vw;
+}
+
+.left-gif img,
+.right-gif img {
+  width: auto;
+  height: 200px;
+  image-rendering: pixelated;
+}
+
+.left-gif a,
+.right-gif a {
+  text-decoration: none;
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  color: white;
+  margin-top: 1rem;
+}
+
+.left-gif a:hover,
+.right-gif a:hover {
+  color: #39FF14;
+}
+
+.gif-row {
+  display: flex;
+  justify-content: center;
+  gap: 6rem;
+  margin-top: 2rem;
+}
+
+
+/* ========== 네비게이션 ========== */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  backdrop-filter: blur(10px);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1.8px solid #ffffff15;
+}
+
+nav .logo {
+  font-weight: bold;
+  font-size: 29px;
+  font-family: 'Impact', sans-serif;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+nav ul {
+  font-family: 'Courier New', monospace;
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+nav ul li a {
+  color: #000000;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+nav ul li a.active {
+  color: #24ee00;
+}
+
+
+
+ .timeline {
+            position: relative;
+            margin: 40px 0;
+            padding-left: 30px;
+        }
+        .timeline:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 4px;
+            background: #0066cc;
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+        }
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            left: -34px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: white;
+            border: 4px solid #0066cc;
+        }
+        .timeline-date {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #0066cc;
+        }
+
+/* ========== 타이틀 및 텍스트 ========== */
+h1, h2 {
+  font-family: 'Courier New', monospace;
+  letter-spacing: -0.5px;
+  text-transform: uppercase;
+  text-align: right;
+}
+
+h3 {
+  margin-top: 5rem;
+}
+
+.highlight {
+  color: #26ff00;
+  font-weight: bold;
+}
+.big {
+  font-size: 280px;
+  line-height: 1.1;
+  font-weight: bold;
+  text-align: center;
+}
+.inline-gif {
+  height: 280px;
+  vertical-align: baseline;
+  display: inline-block;
+  transform: translateY(40px);
+}
+
+.subtle-text {
+  color: rgba(255, 255, 255, 0.3);
+  font-style: italic;
+  filter: blur(0.4px);
+}
+
+ul {
+  list-style: square;
+  padding-left: 1.5rem;
+}
+
+/* ========== 표 스타일 ========== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+  border: 1px solid #555;
+  padding: 0.75rem;
+  color: #fff;
+}
+
+th {
+  background-color: rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+}
+
+/* ========== 인용문 ========== */
+blockquote {
+  background-color: rgba(0, 0, 0, 0.128);
+  backdrop-filter: blur(10px);
+  padding: 1rem;
+  border-left: 2px solid #04ff008c;
+  margin: 1rem 0;
+}
+
+/* ========== 버튼 ========== */
+.center-content {
+  text-align: center;
+}
+
+.solution-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: #000000;
+  color: #39FF14;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.solution-button:hover {
+  background-color: #ffffff;
+  color: #000000;
+  transform: scale(1.05);
+  cursor: url('https://cur.cursors-4u.net/cursors/cur-11/cur1027.cur'), auto;
+}
+
+/* ========== 푸터 ========== */
+footer {
+  background-color: #000000;
+  padding: 2rem 0;
+  text-align: center;
+  color: #b1b1b1;
+}
+
+/* ========== 스크롤 애니메이션 ========== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+
+.fade-in.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ========== 반응형 레이아웃 ========== */
+@media screen and (max-width: 768px) {
+  .wrap,
+  .wrap-white,
+  .wrap-green {
+    padding: 2rem 1rem;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  h2 {
+    font-size: 20px;
+    text-align: left;
+  }
+
+  .wrap-black p {
+    font-size: 48px;
+    padding: 0 1rem;
+  }
+
+  .left-gif,
+  .right-gif {
+    width: 90px;
+    top: 50%;
+  }
+
+  .left-gif a,
+  .right-gif a {
+    font-size: 12px;
+  }
+}
